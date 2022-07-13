@@ -1,5 +1,5 @@
 {% set name = "naaf" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/naaf-{{ version }}.tar.gz
-  sha256: 003e9edf41d392eb654ef1ff67144cb83cde2260ecfd181dbe570801f375244a
+  sha256: 8edfecdb2eac14bf4c12e2fc31b5eba9a0a286308e9e0e19c7f195426d1ca1ed
 
 build:
   noarch: python
