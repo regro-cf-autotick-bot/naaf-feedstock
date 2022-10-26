@@ -21,6 +21,7 @@ requirements:
     - setuptools-scm
   run:
     - click
+    - cryotypes
     - dask-core
     - dynamotable >=0.2.4
     - emfile >=0.3
