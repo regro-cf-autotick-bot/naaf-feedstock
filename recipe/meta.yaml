@@ -1,5 +1,5 @@
 {% set name = "naaf" %}
-{% set version = "0.2.3" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/naaf-{{ version }}.tar.gz
-  sha256: 8edfecdb2eac14bf4c12e2fc31b5eba9a0a286308e9e0e19c7f195426d1ca1ed
+  sha256: 0d7a87db36c7ea2d83f8e03dcea4656bd6985f2e84860b39ebee076710202950
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
     - setuptools-scm
   run:
     - click
+    - cryotypes
     - dask-core
     - dynamotable >=0.2.4
     - emfile >=0.3
