@@ -6,18 +6,18 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/naaf-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/naaf-{{ version }}.tar.gz
   sha256: 926dee35e3d7bfbab5fb7d1d3f103260bfd10a391d3f992291fae0628a18daea
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - click
@@ -30,7 +30,7 @@ requirements:
     - numpy
     - pandas
     - pydantic
-    - python >=3.8
+    - python >={{ python_min }}
     - scipy
     - starfile >=0.4.5
 
@@ -42,6 +42,7 @@ test:
     # - pip check  # This can be uncommente when pinnings are relaxed upstream
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/gutsche-lab/naaf
